@@ -38,6 +38,8 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected successfully'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+app.get('/', (req, res) => res.send('API running'));
+
 app.use('/api/expenses', expenseRoutes);
 
 if (!process.env.VERCEL) {
