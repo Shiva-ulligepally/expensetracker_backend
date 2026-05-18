@@ -17,6 +17,7 @@ if (!process.env.VERCEL && !fs.existsSync(uploadDir)) {
 
 const allowedOrigins = [
   process.env.FRONTEND_URL,
+  'https://expensetracker-frontend-zeta.vercel.app',
   'http://localhost:5173',
   'http://localhost:3000'
 ].filter(Boolean);
